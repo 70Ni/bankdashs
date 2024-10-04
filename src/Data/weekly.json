@@ -1,0 +1,37 @@
+[
+  {
+    "Deposit": 480,
+    "withdraw": 250,
+    "day": "Sat"
+  },
+  {
+    "Deposit": 370,
+    "withdraw": 120,
+    "day": "Sun"
+  },
+  {
+    "Deposit": 490,
+    "withdraw": 280,
+    "day": "Mon"
+  },
+  {
+    "Deposit": 180,
+    "withdraw": 390,
+    "day": "Tue"
+  },
+  {
+    "Deposit": 400,
+    "withdraw": 230,
+    "day": "Wed"
+  },
+  {
+    "Deposit": 400,
+    "withdraw": 240,
+    "day": "Thu"
+  },
+  {
+    "Deposit": 420,
+    "withdraw": 380,
+    "day": "Fri"
+  }
+]

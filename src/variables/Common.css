@@ -1,0 +1,13 @@
+.card {
+  @apply p-S28  rounded-xl bg-white max-[548px]:p-S16;
+}
+
+.page-outer {
+  @apply m-S40 flex flex-col gap-S28 max-[548px]:m-S16; 
+}
+.content-outer-wrapper {
+  @apply flex flex-col flex-1  gap-S8;
+}
+.flexsec {
+  @apply flex gap-S20 w-full
+}

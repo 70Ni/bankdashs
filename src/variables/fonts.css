@@ -1,0 +1,31 @@
+.Header {
+  @apply text-[28px] text-gray-800 font-semibold;
+}
+
+.subHeader {
+  @apply text-[22px] text-gray-800 font-medium;
+}
+.Buttontxt {
+  @apply text-[18px] text-gray-800 font-medium;
+}
+
+.font20 {
+  @apply text-[20px] text-gray-800 font-medium;
+}
+.smalltxt {
+  @apply text-[12px] text-gray-800 font-normal;
+}
+.regtxt {
+  @apply text-[16px] text-gray-800 font-normal;
+}
+
+.medtxt {
+  @apply text-[16px] text-gray-800 font-medium;
+}
+.subtxt {
+  @apply text-[15px] text-inputcolor-100 font-normal;
+}
+
+.graphindicator {
+  @apply text-[13px] text-inputcolor-100 font-normal;
+}
