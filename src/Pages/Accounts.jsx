@@ -9,9 +9,9 @@ function Accounts() {
   return (
     <div className="page-outer">
       <Sumsection />
-      <div className="flexsec">
+      <div className="flexsec max-[930px]:flex-col">
         <Transactions />
-        <div className="card-wrpr w-1/2">
+        <div className="card-wrpr w-1/2 max-[930px]:w-full">
           <CreditCard />
         </div>
       </div>
