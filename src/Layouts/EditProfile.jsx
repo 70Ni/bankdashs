@@ -79,10 +79,10 @@ const profileInputs = [
 function EditProfile() {
   return (
     <div className="card border rounded-xl">
-      <div className="content my-S16">
-        <div className="avatar-form-wrpr flex w-full">
-          <Avatar edit />
-          <div className=" ml-S28 form-wrpr w-full flex flex-col gap-S20">
+      <div className="content my-S16 ">
+        <div className="avatar-form-wrpr flex w-full max-[692px]:flex-col">
+            <Avatar edit />
+          <div className=" ml-S28 form-wrpr w-full flex flex-col gap-S20 max-[692px]:ml-0 max-[692px]:items-center max-[692px]:mt-S24">
             {profileInputs.map((items) => {
               return <InputFlex data={items} />;
             })}
