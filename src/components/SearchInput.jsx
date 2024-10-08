@@ -23,7 +23,7 @@ function SearchInput({ title, placeholder, id, name }) {
         text-inputcolor-100
         bg-inputcolor-300
         rounded-full
-        focus:outline-blue-500
+        focus:outline-primary
         w-full
         "
       />

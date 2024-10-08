@@ -4,8 +4,16 @@ import lgo from "../Img/BankDash..svg";
 import SearchInput from "./SearchInput";
 import Avatar from "./Avatar";
 import SettingsIcon from "./Icons/SettingsIcon";
+import { Link } from "react-router-dom";
 
-function TopBar({ action }) {
+function TopBar({ action, location }) {
+  var Headername;
+  function capitalizeFirstLetter(str) {
+    const name = str.replace(/\//g, "");
+    const uppercase = name.charAt(0).toUpperCase() + name.slice(1);
+    return (Headername = uppercase);
+  }
+  capitalizeFirstLetter(location);
   return (
     // <div className="flex fixed top-0 right-0 z-50 items-center w-full justify-between md:px-9 p-p12 px-p16 bg-white h-fit border border-b shadow-sm">
     //   {/* logo-search section */}
@@ -75,22 +83,25 @@ function TopBar({ action }) {
             <div className="logo h-9 w-9  mr-2 max-[400px]:h-8 max-[400px]:w-8">
               <img src={walletIcon} alt="logo" className="h-9 w-9" />
             </div>
-            <img
+            <imgs
               className="logoname max-md:hidden"
               src={lgo}
               alt="modernize logo"
             />
           </div> */}
-          <div className="font20 mr-3">Overview</div>
+          <div className="font20 mr-3">{Headername}</div>
         </div>
         <div className="right flex items-center gap-S20">
-        <div className="searchinput-wrapr max-[468px]:hidden">
-
-          <SearchInput  />
-        </div>
-          <SettingsIcon />
+          <div className="searchinput-wrapr max-[468px]:hidden">
+            <SearchInput />
+          </div>
+          <Link to="settings">
+            <SettingsIcon />
+          </Link>
           <div className="avarlink">
-            <Avatar small />
+            <Link to="settings">
+              <Avatar small />
+            </Link>
           </div>
         </div>
       </div>

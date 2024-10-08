@@ -5,6 +5,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        orange: "var(--orange-color)",
+        yellow: "var(--yellow-color)",
+        primary: "var(--primary-color)",
+        secondary: "var(--secondary-color)",
+        lightblue: "var(--lightblue-color)",
+        purple: "var(--purple-color)",
         bordercolor: "#DFEAF2",
         inputcolor: {
           100: "#718EBF",
@@ -13,7 +19,7 @@ module.exports = {
         },
       },
       spacing: {
-        S130: "var(--spacing-150px)",
+        S100: "var(--spacing-100px)",
         S40: "var(--spacing-40px)",
         S28: "var(--spacing-28px)",
         S24: "var(--spacing-24px)",

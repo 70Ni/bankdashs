@@ -6,6 +6,7 @@ import Weeklygraph from "../Layouts/WeeklyGraph";
 import CommonGraph from "../Layouts/Investment/CommonGraph";
 import PaymentUI from "../components/PaymentUI";
 import EditProfile from "../Layouts/EditProfile";
+import data from "../Data/weekly.json";
 
 function Dashboard() {
   return (
@@ -19,7 +20,14 @@ function Dashboard() {
         <ExpenseChart />
       </div>
       <div className="flexsec  max-[930px]:flex-col">
-        <CommonGraph Header={"Balance History"} />
+        <CommonGraph
+          Header={"Balance History"}
+          DATA={data.map((item) => {
+            return { Deposit: item.Deposit, day: item.day };
+          })}
+          flexauto
+        />
+
         <PaymentUI />
       </div>
     </div>

@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Input from "./components/Input";
@@ -23,19 +24,31 @@ import Recentransaction from "./Layouts/Dashboard/Recentransaction";
 import Transaction from "./Pages/Transaction";
 import Investment from "./Pages/Investment";
 import Accounts from "./Pages/Accounts";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import CreditcardPage from "./Pages/CreditcardPage";
 import Settingspage from "./Pages/Settingspage";
 import Table from "./components/Table";
+import EmptyPage from "./Pages/EmptyPage";
 
 function App() {
+  const [theme, settheme] = useState();
+  const [dark, setDark] = useState(false);
+  const [compact, setCompapct] = useState(false);
+
+  const location = useLocation();
+  const [url, setUrl] = React.useState("Back Home");
+  useEffect(() => {
+    setUrl(location.pathname);
+  }, [location]);
+
   return (
-    <div className="App w-full relative flex h-full bg-slate-100">
+    <div className={`App w-full Greentheme relative flex h-full bg-gray-100`}>
       <Navigation />
       <div className="page-wrapper w-full h-full">
-        <TopBar />
+        <TopBar location={url} />
         <Routes>
-          <Route path="/" element={<Dashboard />}></Route>
+          <Route path="*" element={<EmptyPage />}></Route>
+          <Route path="/Home" element={<Dashboard />}></Route>
           <Route path="/accounts" element={<Accounts />}></Route>
           <Route path="/investment" element={<Investment />}></Route>
           <Route path="/creditcard" element={<CreditcardPage />}></Route>

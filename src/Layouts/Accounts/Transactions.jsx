@@ -37,25 +37,27 @@ function Transactions() {
   return (
     <div className="content-outer-wrapper">
       <HeaderSec Header={"Last Transaction"} />
-      <div className=" card w-full h-fit">
+      <div className=" card w-full h-fit flex flex-col gap-S20">
         {data.map((item) => {
           return (
-            <div className="row flex items-center mb-S8">
+            <div className="row flex items-center justify-between mb-S8">
               <SettingsIcon />
               <div className="category-wrpr ml-2 flex-1">
                 <Categoryterm category={item.Transact} sub={item.Date} />
               </div>
-              <div className="row-wrar flex justify-between flex-1 mx-2">
-                <div className="subtxt mx-2">Shopping</div>
-                <div className="subtxt mx-2">Shopping</div>
-                <div className="subtxt mx-2">Shopping</div>
-                {/* <div
-            className={`value medtxt ml-3  ${
-              x.value.match(/\+/g) ? "text-green-500" : "text-red-600"
-            }`}
-          >
-            {x.value}
-          </div> */}
+              <div className="row-wrar flex justify-between max-[468px]:justify-end flex-1 mx-2">
+                <div className="subtxt mx-2 max-[400px]:hidden">Shopping</div>
+                <div className="subtxt mx-2 text-nowrap max-[664px]:hidden">
+                  1234 ****
+                </div>
+                <div className="subtxt mx-2 max-[468px]:hidden">Pending</div>
+                <div
+                  className={`value medtxt ml-3  ${
+                    item.Amount.match(/\+/g) ? "text-green-500" : "text-red-600"
+                  }`}
+                >
+                  {item.Amount}
+                </div>
               </div>
             </div>
           );

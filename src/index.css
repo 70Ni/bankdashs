@@ -5,9 +5,25 @@
 @import url(../src/variables/fonts.css);
 @import url(../src/variables/Common.css);
 
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
 :root {
-  --primary-color: #fff;
-  --secondary-color: #000;
+  --primary-color: #1814f3;
+  --secondary-color: #16dbcc;
+  --lightblue-color: #16dbcc;
+  --orange-color: #fc7900;
+  --yellow-color: #ffbb38;
+  --purple-color: #962891;
+
   --color-text-base: #fff;
   --color-text-muted: #b600bf;
   /* padding */
@@ -15,7 +31,7 @@
   --second-padding: 20px;
   --spacing-30px: 30px;
 
-  --spacing-150px: 150px;
+  --spacing-100px: 100px;
   --spacing-40px: 40px;
   --spacing-28px: 28px;
   --spacing-24px: 24px;
@@ -45,6 +61,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.Greentheme {
+  --primary-color: #39893D;
+  --primary-color: #161E2C;
+
+  --spacing-100px: 100px;
+  --spacing-40px: 40px;
+  --spacing-28px: 20px;
+  --spacing-24px: 16px;
+  --spacing-20px: 16px;
+  --padding-16px: 16px;
+  --padding-12px: 12px;
+  --spacing-8px: 8px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

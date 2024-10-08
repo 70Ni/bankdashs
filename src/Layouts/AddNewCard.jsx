@@ -35,7 +35,7 @@ const data2 = [
 ];
 function AddNewCard() {
   return (
-    <div className="content-outer-wrapper flex-auto w-4/6">
+    <div className="content-outer-wrapper flex-auto w-4/6 max-[930px]:w-full">
       <HeaderSec Header="Add New Card" />
       <div className="card w-full flex flex-col gap-S12">
         <div className="header regtxt text-inputcolor-100 text-left">
@@ -47,7 +47,9 @@ function AddNewCard() {
         <InputFlex data={data} />
         <InputFlex data={data2} />
         <div className="buttonw-wrapper flex gap-4 items-center justify-end">
-          <SecondaryButton text={"Cancel"} />
+          <div className="secondarybutton max-[]:">
+            <SecondaryButton text={"Cancel"} />
+          </div>
           <PrimaryButton text={"Add Card"} />
         </div>
       </div>

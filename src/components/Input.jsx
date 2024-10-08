@@ -1,6 +1,7 @@
 import React from "react";
 
-function Input({ title, placeholder, id, name,type }) {
+
+function Input({ title, placeholder, id, name, type }) {
   return (
     <div className="flex flex-col items-start w-full min-w-[158px]">
       <label className="text-gray-800 mb-S8 regtxt" for="fname">
@@ -17,7 +18,7 @@ function Input({ title, placeholder, id, name,type }) {
         border-bordercolor
         text-inputcolor-100
         rounded
-        focus:outline-blue-500
+        focus:outline-primary
         w-full
         text-para
         "

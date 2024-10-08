@@ -10,6 +10,7 @@ function PaymentUI() {
       <HeaderSec Header={"Quick Transfer"} />
 
       <div className="card w-fit flex flex-col justify-between h-full max-lg:w-full">
+        <div className="font20 text-left mb-4">Tranfer Amount</div>
         <div className="avatar-more-group flex justify-between">
           <div className="avatargroup flex gap-S28 max-[930px]:gap-y-S8">
             <div className="avatar-wrpr flex flex-col items-center justify-center">
@@ -35,7 +36,7 @@ function PaymentUI() {
             </div>
           </div>
           <div className="avatar-wrpr flex flex-col items-center">
-            <div className="name-term mt-2 ml-4 border border-blue-500 px-S16 py-2 rounded-full cursor-not-allowed">
+            <div className="name-term mt-2 ml-4 border border-primary px-S16 py-2 rounded-full cursor-not-allowed">
               <div className="name medtxt"> See more</div>
             </div>
           </div>

@@ -3,7 +3,9 @@ import React from "react";
 function MoneyIcon({ color, bg, rounded, padding }) {
   return (
     <div
-      className={`p-S16 h-fit rounded-full w-fit bg-[${color}] ${rounded} ${padding} bg-opacity-10 hover:bg-opacity-15 duration-75`}
+      className={`p-S16 h-fit rounded-full w-fit ${
+        bg && bg-[color]
+      } ${rounded} ${padding} bg-opacity-10 hover:bg-opacity-15 duration-75`}
     >
       <svg
         width="20"

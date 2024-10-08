@@ -3,7 +3,7 @@ import Input from "../components/Input";
 
 function InputFlex({ data }) {
   return (
-    <div className="flex gap-S24">
+    <div className="flex gap-S24 max-[548px]:flex-col w-full">
       <Input
         placeholder={data[0].placeholder}
         title={data[0].title}

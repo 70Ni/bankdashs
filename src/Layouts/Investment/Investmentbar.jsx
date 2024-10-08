@@ -33,18 +33,18 @@ function Investmentbar() {
       <HeaderSec Header={"Card List"} />
       {data.map((item) => {
         return (
-          <div className="row card flex items-center mb-S8 justify-between">
+          <div className="row card flex gap-S12 items-center mb-S8 justify-between">
             <SettingsIcon />
             <div className="flex-1 ml-S8">
               <Categoryterm category={item.Invested} sub={item.category} />
             </div>
-            <div className="flex-1">
+            <div className="flex-1 max-[468px]:hidden">
               <Categoryterm category={item.value} sub="Investment value" />
             </div>
             <div className="flex flex-col">
               <div
-                className={`value medtxt ml-3  text-left ${
-                  item.return.match(/\+/g) ? "text-green-500" : "text-red-600"
+                className={`value medtxt   text-left ${
+                  item.return.match(/\+/g) ? "text-primary" : "text-orange"
                 }`}
               >
                 {item.return}

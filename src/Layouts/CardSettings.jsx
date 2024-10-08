@@ -8,24 +8,37 @@ import HeaderSec from "./HeaderSec";
 
 const carddetails = [
   {
-    category: "Apple Store",
-    sub: "E-commerce, Marketplace",
+    icon: "",
+    category: "Block Card",
+    sub: "Instantly block your card",
   },
   {
-    category: "Apple Store",
-    sub: "E-commerce, Marketplace",
+    icon: "",
+    category: "Change Pin Code",
+    sub: "Choose another pin code",
   },
   {
-    category: "Apple Store",
-    sub: "E-commerce, Marketplace",
+    icon: "",
+    category: "Add to Google Pay",
+    sub: "Withdraw without any card",
+  },
+  {
+    icon: "",
+    category: "Add to Apple Pay",
+    sub: "Withdraw without any card",
+  },
+  {
+    icon: "",
+    category: "Add to Apple Store",
+    sub: "Withdraw without any card",
   },
 ];
 
 function CardSettings() {
   return (
-    <div className="content-outer-wrapper flex-auto w-2/6">
+    <div className="content-outer-wrapper h-full flex-auto w-2/6 max-[930px]:w-full">
       <HeaderSec Header={"Card Setting"} />
-      <div className="card">
+      <div className="card  h-full flex flex-col gap-S20">
         {carddetails.map((x) => {
           return (
             <div className="flex gap-4">

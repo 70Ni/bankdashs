@@ -1,7 +1,7 @@
 import React from "react";
 
 function ToggleButton({ disable }) {
-  const active = "bg-blue-500 duration-700 ease-in-out";
+  const active = "bg-primary duration-700 ease-in-out";
   const passive = "bg-inputcolor-200";
   const transitionPassive = "ease-in-out duration-300";
   const transitionActive = "translate-x-full ease-in-out duration-300";
