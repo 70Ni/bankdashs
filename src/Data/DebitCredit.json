@@ -1,0 +1,52 @@
+[
+  {
+    "Deposit": 214,
+    "withdraw": 254,
+    "day": "Sat"
+  },
+  {
+    "Deposit": 120,
+    "withdraw": 148,
+    "day": "Sun"
+  },
+  {
+    "Deposit": 251,
+    "withdraw": 253,
+    "day": "Mon"
+  },
+  {
+    "Deposit": 248,
+    "withdraw": 120,
+    "day": "Tue"
+  },
+  {
+    "Deposit": 253,
+    "withdraw": 217,
+    "day": "Wed"
+  },
+  {
+    "Deposit": 127,
+    "withdraw": 234,
+    "day": "Thu"
+  },
+  {
+    "Deposit": 219,
+    "withdraw": 247,
+    "day": "Fri"
+  },
+  {
+    "Deposit": 324,
+    "withdraw": 417,
+    "day": "Sat"
+  },
+  {
+    "Deposit": 241,
+    "withdraw": 84,
+    "day": "Sun"
+  },
+  {
+    "Deposit": 224,
+    "withdraw": 250,
+    "day": "Mon"
+  }
+]

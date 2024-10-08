@@ -5,7 +5,7 @@
     "day": "Sat"
   },
   {
-    "Deposit": 370,
+    "Deposit": 170,
     "withdraw": 120,
     "day": "Sun"
   },
@@ -33,5 +33,20 @@
     "Deposit": 420,
     "withdraw": 380,
     "day": "Fri"
+  },
+  {
+    "Deposit": 120,
+    "withdraw": 250,
+    "day": "Sat"
+  },
+  {
+    "Deposit": 580,
+    "withdraw": 250,
+    "day": "Sun"
+  },
+  {
+    "Deposit": 480,
+    "withdraw": 250,
+    "day": "Mon"
   }
 ]
