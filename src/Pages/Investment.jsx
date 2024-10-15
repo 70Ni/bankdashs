@@ -22,17 +22,18 @@ function Investment() {
       <Sumsection />
       <div className="flexsec">
         <CommonGraph
-          Header={"Debit & Credit Overview"}
+          Header={"Yearly Total Investment"}
           DATA={data.map((item) => {
             return { Deposit: item.Deposit, day: item.day };
           })}
+          OPTIONS={{ color: primaryColor, tension: 0 }}
         />
         <CommonGraph
-          Header={"Debit & Credit Overview"}
+          Header={"Monthly Revenue"}
           DATA={data.map((item) => {
             return { Deposit: item.withdraw, day: item.day };
           })}
-          OPTIONS={{ color: orange }}
+          OPTIONS={{ color: orange,tension: 0.4 }}
         />
       </div>
       <div className="flexsec">

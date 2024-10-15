@@ -13,9 +13,9 @@ function CreditCard({ cardcont, opacity }) {
   const [view, setview] = React.useState(true);
   return (
     <div
-      className={`card bg-gradient-to-br  from-gray-900 to-gray-800 ${
+      className={`card bg-gradient-to-br  from-gray-800 to-gray-900 ${
         opacity && "opacity-50"
-      } hover:shadow-2xl duration-500  border rounded-3xl w-full flex-1 text-left flex flex-col gap-S20`}
+      } hover:shadow-2xl duration-500  border rounded-xl w-full flex-1 text-left flex flex-col gap-S20`}
     >
       <div className="header-section flex w-full justify-between ">
         <div className="balance-wrap">

@@ -29,6 +29,7 @@ import CreditcardPage from "./Pages/CreditcardPage";
 import Settingspage from "./Pages/Settingspage";
 import Table from "./components/Table";
 import EmptyPage from "./Pages/EmptyPage";
+import TopNav from "../src/components/TopNav/Topnav";
 
 function App() {
   const [theme, settheme] = useState();
@@ -42,10 +43,11 @@ function App() {
   }, [location]);
 
   return (
-    <div className={`App w-full Greentheme relative flex h-full bg-gray-100`}>
-      <Navigation />
+    <div className={`App w-full relative flex h-full bg-gray-100`}>
+      {/* <Navigation /> */}
       <div className="page-wrapper w-full h-full">
         <TopBar location={url} />
+        <TopNav />
         <Routes>
           <Route path="*" element={<EmptyPage />}></Route>
           <Route path="/Home" element={<Dashboard />}></Route>

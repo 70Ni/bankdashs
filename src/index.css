@@ -24,6 +24,9 @@
   --yellow-color: #ffbb38;
   --purple-color: #962891;
 
+  --background-color: #09090b;
+  --card-color: #18181b;
+
   --color-text-base: #fff;
   --color-text-muted: #b600bf;
   /* padding */
@@ -62,8 +65,16 @@ body {
 }
 
 .Greentheme {
-  --primary-color: #39893D;
-  --primary-color: #161E2C;
+  --primary-color: #39893d;
+  --primary-color: #161e2c;
+
+ 
+  --primary-color: #1a1a1a; /* Dark gray */
+  --secondary-color: #333333; /* Medium dark gray */
+  --lightblue-color: #4d4d4d; /* Medium gray */
+  --orange-color: #666666; /* Medium light gray */
+  --yellow-color: #808080; /* Gray */
+  --purple-color: #999999; /* Light gray */
 
   --spacing-100px: 100px;
   --spacing-40px: 40px;

@@ -49,6 +49,7 @@ function Navigation() {
             } `}
           >
             <MoneyIcon
+              bg
               color={"#7143BF"}
               // bg={"bg-[#7143BF]"}
               rounded={"rounded-xl"}

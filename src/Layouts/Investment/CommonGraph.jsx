@@ -15,48 +15,96 @@ const secondaryColor = rootStyles.getPropertyValue("--secondary-color");
 const orange = rootStyles.getPropertyValue("--orange-color");
 
 function CommonGraph({ Header, DATA, OPTIONS, BAR, flexauto }) {
+  // const CHARTOPTIONS = {
+  //   maintainAspectRatio: false,
+  //   responsive: true,
+  //   layout: {},
+  //   pointRadius: 0,
+
+  //   barThickness: 20,
+  //   borderRadius: 80,
+  //   barPercentage: 0.2,
+  //   categoryPercentage: 0.8,
+  //   plugins: {
+  //     tooltip: {
+  //       //   callbacks: {
+  //       //     afterTitle: "Hello there",
+  //       //   },
+  //       titleColor: "#fff",
+  //       titleAlign: "center",
+  //       bodyAlign: "center",
+  //       //   bodyFont: 14,
+  //     },
+  //     legend: {
+  //       display: false,
+  //       labels: {
+  //         // This more specific font property overrides the global property
+  //         font: {
+  //           size: 24,
+  //           weight: "bold",
+  //         },
+  //       },
+  //     },
+  //   },
+
+  //   // Modify the axis by adding scales
+  //   scales: {
+  //     // to remove the labels
+  //     x: {
+  //       ticks: {
+  //         display: true,
+  //         color: "#A1A7C4",
+  //       },
+
+  //       // to remove the x-axis grid
+  //       grid: {
+  //         borderWidth: 0,
+  //         drawOnChartArea: false,
+  //         drawBorder: false,
+  //         display: false,
+  //       },
+  //     },
+  //     y: {
+  //       border: { dash: [2, 4] }, // for the grid lines
+  //       borderWidth: 1,
+  //       ticks: {
+  //         stepSize: 100,
+  //         padding: 14,
+  //         autoSkip: false,
+  //         color: "#A1A7C4",
+  //         font: {
+  //           size: 12,
+  //           weight: "Normal",
+  //         },
+  //       },
+  //       grid: {
+  //         borderWidth: 0,
+  //         color: "#E6E9F4",
+  //       },
+
+  //       beginAtZero: true,
+  //     },
+  //   },
+  // };
   const CHARTOPTIONS = {
     maintainAspectRatio: false,
     responsive: true,
-    layout: {},
-    pointRadius: 0,
 
-    barThickness: 20,
-    borderRadius: 80,
-    barPercentage: 0.2,
-    categoryPercentage: 0.8,
     plugins: {
-      tooltip: {
-        //   callbacks: {
-        //     afterTitle: "Hello there",
-        //   },
-        titleColor: "#fff",
-        titleAlign: "center",
-        bodyAlign: "center",
-        //   bodyFont: 14,
-      },
       legend: {
         display: false,
-        labels: {
-          // This more specific font property overrides the global property
-          font: {
-            size: 24,
-            weight: "bold",
-          },
-        },
       },
     },
 
-    // Modify the axis by adding scales
     scales: {
-      // to remove the labels
       x: {
+        stacked: false, // Set to true for stacked bar charts
+
         ticks: {
           display: true,
           color: "#A1A7C4",
         },
 
-        // to remove the x-axis grid
         grid: {
           borderWidth: 0,
           drawOnChartArea: false,
@@ -65,11 +113,12 @@ function CommonGraph({ Header, DATA, OPTIONS, BAR, flexauto }) {
         },
       },
       y: {
-        border: { dash: [2, 4] }, // for the grid lines
-        borderWidth: 1,
+        border: { dash: [4, 4] }, // for the grid lines
+        borderWidth: 2,
+        //   grace: '25%',
         ticks: {
           stepSize: 100,
-          padding: 14,
+          padding: 0,
           autoSkip: false,
           color: "#A1A7C4",
           font: {
@@ -79,40 +128,44 @@ function CommonGraph({ Header, DATA, OPTIONS, BAR, flexauto }) {
         },
         grid: {
           borderWidth: 0,
-          color: "#E6E9F4",
+          color: "#E6E9F4", // for the grid lines
         },
 
         beginAtZero: true,
       },
     },
   };
-
   const linechartData = {
     labels: DATA.map((day) => day.day),
     datasets: [
       {
         label: "Deposit",
         data: DATA.map((day) => day.Deposit),
-        borderColor: OPTIONS ? OPTIONS.color : primaryColor,
-        tension: 0.4,
+        borderColor: OPTIONS?.color ? OPTIONS?.color : primaryColor,
+        tension: OPTIONS?.tension ? OPTIONS.tension : 0.4,
         fill: true,
+        barPercentage: 0.7,
+        categoryPercentage: 0.3,
+        borderRadius: 20,
         backgroundColor: BAR
           ? primaryColor
           : OPTIONS
-          ? OPTIONS.color + 10
+          ? OPTIONS?.color + 10
           : primaryColor + 10,
       },
       {
         label: "Withdraw",
         data: DATA.map((day) => day.withdraw),
-        border: OPTIONS ? OPTIONS.color : primaryColor,
-        tension: 0.4,
+        border: OPTIONS?.color ? OPTIONS?.color : primaryColor,
+        tension: OPTIONS?.tension ? OPTIONS?.tension : 0.4,
         fill: true,
-
+        barPercentage: 0.7,
+        categoryPercentage: 0.3,
+        borderRadius: 20,
         backgroundColor: BAR
           ? secondaryColor
           : OPTIONS
-          ? OPTIONS.color + 10
+          ? OPTIONS?.color + 10
           : secondaryColor + 10,
       },
     ],

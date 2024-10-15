@@ -7,6 +7,7 @@ import CommonGraph from "../Layouts/Investment/CommonGraph";
 import PaymentUI from "../components/PaymentUI";
 import EditProfile from "../Layouts/EditProfile";
 import data from "../Data/weekly.json";
+import { color } from "chart.js/helpers";
 
 function Dashboard() {
   return (

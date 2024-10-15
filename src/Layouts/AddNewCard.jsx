@@ -38,7 +38,7 @@ function AddNewCard() {
     <div className="content-outer-wrapper flex-auto w-4/6 max-[930px]:w-full">
       <HeaderSec Header="Add New Card" />
       <div className="card w-full flex flex-col gap-S12">
-        <div className="header regtxt text-inputcolor-100 text-left">
+        <div className="header regtxt text-gray-400 text-left">
           Credit Card generally means a plastic card issued by Scheduled
           Commercial Banks assigned to a Cardholder, with a credit limit, that
           can be used to purchase goods and services on credit or obtain cash

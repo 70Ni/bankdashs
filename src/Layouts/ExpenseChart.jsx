@@ -5,23 +5,24 @@ import data from "../Data/weekly.json";
 
 // Get the root element
 const root = document.documentElement;
+// const element =document.querySelector('.Greentheme');
+const rootStyles = window.getComputedStyle(root);
 
-// Get the computed styles for the root element
-const rootStyles = getComputedStyle(root);
-
-// Access a specific CSS variable value
 const primaryColor = rootStyles.getPropertyValue("--primary-color");
-const secondaryColor = rootStyles.getPropertyValue("--lightblue-color");
+const secondaryColor = rootStyles.getPropertyValue("--secondary-color");
 const orange = rootStyles.getPropertyValue("--orange-color");
 const yellow = rootStyles.getPropertyValue("--yellow-color");
 const dark = rootStyles.getPropertyValue("--purple-color");
+// Get the computed styles for the root element
+
+// Access a specific CSS variable value
 
 const options = {
-  borderWidth: 4,
-  cutout: "80%",
+  borderWidth: 5,
+  cutout: "88%",
   // aspectRatio: 1.4,
   padding: {
-    bottom: 20
+    bottom: 20,
   },
 
   plugins: {
