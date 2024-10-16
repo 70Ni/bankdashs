@@ -50,7 +50,7 @@ function App() {
         <TopNav />
         <Routes>
           <Route path="*" element={<EmptyPage />}></Route>
-          <Route path="/Home" element={<Dashboard />}></Route>
+          <Route path="/Home" exact element={<Dashboard />}></Route>
           <Route path="/accounts" element={<Accounts />}></Route>
           <Route path="/investment" element={<Investment />}></Route>
           <Route path="/creditcard" element={<CreditcardPage />}></Route>
