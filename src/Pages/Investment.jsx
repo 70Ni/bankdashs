@@ -1,5 +1,5 @@
 import React from "react";
-import Sumsection from "../Layouts/Investment/Sumsection";
+import Sumsection from "../Layouts/Investment/SumsectionInvest";
 import CommonGraph from "../Layouts/Investment/CommonGraph";
 import data from "../Data/weekly.json";
 import Investmentbar from "../Layouts/Investment/Investmentbar";
@@ -38,7 +38,7 @@ function Investment() {
       </div>
       <div className="flexsec">
         <Investmentbar />
-        <Stocktable />
+        {/* <Stocktable /> */}
       </div>
     </div>
   );

@@ -3,7 +3,9 @@ import Avatar from "./Avatar";
 import Input from "./Input";
 import Sendmoney from "./Sendmoney";
 import HeaderSec from "../Layouts/HeaderSec";
-
+import avat01 from "../../src/Img/avatar01.png";
+import avat02 from "../../src/Img/avatar02.png";
+import avat03 from "../../src/Img/avatar03.png";
 function PaymentUI() {
   return (
     <div className="content-outer-wrapper flex-auto">
@@ -14,23 +16,36 @@ function PaymentUI() {
         <div className="avatar-more-group flex justify-between">
           <div className="avatargroup flex gap-S28 max-[930px]:gap-y-S8">
             <div className="avatar-wrpr flex flex-col items-center justify-center">
-              <Avatar small />
+              <img
+                src={avat03}
+                alt="avatar"
+                className="rounded-full h-10 w-10 object-cover"
+              />
               <div className="name-term mt-2">
                 <div className="name medtxt"> Livia Bator</div>
-                <div className="posti subtxt"> CEO</div>
+                <div className="posti subtxt"> Personal</div>
               </div>
             </div>
             <div className="avatar-wrpr flex flex-col items-center">
-              <Avatar small />
+              <img
+                src={avat02}
+                alt="avatar"
+                className="rounded-full h-10 w-10 object-cover"
+              />
+
               <div className="name-term mt-2">
-                <div className="name medtxt"> Livia Bator</div>
-                <div className="posti subtxt"> CEO</div>
+                <div className="name medtxt"> Linda H</div>
+                <div className="posti subtxt">Pioneer</div>
               </div>
             </div>
             <div className="avatar-wrpr flex flex-col items-center max-[468px]:hidden">
-              <Avatar small />
+              <img
+                src={avat01}
+                alt="avatar"
+                className="rounded-full h-10 w-10 object-cover"
+              />
               <div className="name-term mt-2">
-                <div className="name medtxt"> Livia Bator</div>
+                <div className="name medtxt"> Sharuq</div>
                 <div className="posti subtxt"> CEO</div>
               </div>
             </div>

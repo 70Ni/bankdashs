@@ -43,7 +43,7 @@ function App() {
   }, [location]);
 
   return (
-    <div className={`App w-full relative flex h-full bg-gray-100`}>
+    <div className={`App w-full relative flex h-full bg-white`}>
       {/* <Navigation /> */}
       <div className="page-wrapper w-full h-full">
         <TopBar location={url} />

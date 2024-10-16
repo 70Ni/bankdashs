@@ -4,7 +4,7 @@ function Sendmoney({ title, placeholder, id, name, type }) {
   return (
     <div className="flex relative w-full">
       <div className="button absolute right-0 bottom-0">
-        <div className="py-S12 px-S24 rounded-full bg-primary w-fit cursor-pointer">
+        <div className="py-S12 px-S24 rounded-full bg-gray-800 w-fit cursor-pointer">
           <div className=" Buttontxt text-white whitespace-nowrap">Send</div>
         </div>
       </div>

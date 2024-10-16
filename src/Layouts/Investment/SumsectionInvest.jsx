@@ -4,24 +4,25 @@ import BalanceIcon from "../../Img/NavIcons/BalanceIcon";
 import ExpenseIcon from "../../Img/NavIcons/ExpenseIcon";
 import IncomeIcon from "../../Img/NavIcons/IncomeIcon";
 import SavingsIcon from "../../Img/NavIcons/SavingsIcon";
+import Pieicon from "../../Img/NavIcons/PieIcon";
 
 const sumData = [
   {
     icon: "",
-    category: "My Balance",
-    amount: "$12,750",
+    category: "Total Invested Amount",
+    amount: "$150,000",
     icon: <BalanceIcon />,
   },
   {
     icon: "",
-    category: "Income",
-    amount: "$5,600",
-    icon: <IncomeIcon />,
+    category: "Number of Investments",
+    amount: "1,250",
+    icon: <Pieicon />,
   },
   {
     icon: "",
-    category: "Expense",
-    amount: "$3,460",
+    category: "Rate of Return",
+    amount: "+5.80%",
     icon: <ExpenseIcon />,
   },
   {
@@ -31,8 +32,6 @@ const sumData = [
     icon: <SavingsIcon />,
   },
 ];
-
-
 
 function Sumsection() {
   return (

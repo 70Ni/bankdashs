@@ -2,10 +2,11 @@ import React from "react";
 import SettingsIcon from "../../components/Icons/SettingsIcon";
 import Categoryterm from "../../components/Categoryterm";
 import HeaderSec from "../HeaderSec";
+import ExpenseIcon from "../../Img/NavIcons/CardIcon";
 
 const data = [
   {
-    Icon: "",
+    Icon: <ExpenseIcon />,
     Transact: "Spotify Subscription",
     Date: "25 Jan 2021",
     Category: "Shopping",
@@ -14,7 +15,7 @@ const data = [
     Amount: "-$150",
   },
   {
-    Icon: "",
+    Icon: <ExpenseIcon />,
     Transact: "Mobile Service",
     Date: "25 Jan 2021",
     Category: "Service",
@@ -23,7 +24,7 @@ const data = [
     Amount: "-$340",
   },
   {
-    Icon: "",
+    Icon: <ExpenseIcon />,
     Transact: "Emilly Wilson",
     Date: "25 Jan 2021",
     Category: "Transfer",
@@ -41,8 +42,9 @@ function Transactions() {
         {data.map((item) => {
           return (
             <div className="row flex items-center justify-between mb-S8">
-              <SettingsIcon />
-              <div className="category-wrpr ml-2 flex-1">
+              {/* <SettingsIcon /> */}
+              {item.Icon}
+              <div className="category-wrpr ml-4 flex-1">
                 <Categoryterm category={item.Transact} sub={item.Date} />
               </div>
               <div className="row-wrar flex justify-between max-[468px]:justify-end flex-1 mx-2">

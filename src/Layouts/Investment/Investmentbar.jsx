@@ -2,24 +2,25 @@ import React from "react";
 import SettingsIcon from "../../components/Icons/SettingsIcon";
 import Categoryterm from "../../components/Categoryterm";
 import HeaderSec from "../HeaderSec";
+import ExpenseIcon from "../../Img/NavIcons/CardIcon";
 
 const data = [
   {
-    Icon: "",
+    Icon: <ExpenseIcon />,
     Invested: "Spotify Subscription",
     category: "E-commerce, Marketplace",
     value: "$54,000",
     return: "+16%",
   },
   {
-    Icon: "",
+    Icon: <ExpenseIcon />,
     Invested: "Samsung Mobile",
     category: "E-commerce, Marketplace",
     value: "$25,300",
     return: "-4%",
   },
   {
-    Icon: "",
+    Icon: <ExpenseIcon />,
     Invested: "Tesla Motors",
     category: "Electric Vehicles",
     value: "$8,200",
@@ -34,7 +35,7 @@ function Investmentbar() {
       {data.map((item) => {
         return (
           <div className="row card flex gap-S12 items-center mb-S8 justify-between">
-            <SettingsIcon />
+            {item.Icon}
             <div className="flex-1 ml-S8">
               <Categoryterm category={item.Invested} sub={item.category} />
             </div>

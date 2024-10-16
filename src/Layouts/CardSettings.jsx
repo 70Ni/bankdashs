@@ -5,30 +5,33 @@ import HomeIcon from "../components/Icons/HomeIcon";
 import MoneyIcon from "../components/Icons/InvestIcons/Money";
 import SectionNav from "../components/SecNav/SectionNav";
 import HeaderSec from "./HeaderSec";
+import CardIcon from "../Img/NavIcons/CardIcon";
+import LockIcon from "../Img/NavIcons/LockIcon";
+import AppleIcon from "../Img/NavIcons/AppleIcon";
 
 const carddetails = [
   {
-    icon: "",
+    icon: <CardIcon />,
     category: "Block Card",
     sub: "Instantly block your card",
   },
   {
-    icon: "",
+    icon: <LockIcon />,
     category: "Change Pin Code",
     sub: "Choose another pin code",
   },
   {
-    icon: "",
+    icon: <CardIcon />,
     category: "Add to Google Pay",
     sub: "Withdraw without any card",
   },
   {
-    icon: "",
+    icon: <AppleIcon />,
     category: "Add to Apple Pay",
     sub: "Withdraw without any card",
   },
   {
-    icon: "",
+    icon: <AppleIcon />,
     category: "Add to Apple Store",
     sub: "Withdraw without any card",
   },
@@ -42,7 +45,8 @@ function CardSettings() {
         {carddetails.map((x) => {
           return (
             <div className="flex gap-4">
-              <MoneyIcon color="#ff4512" />
+              {/* <MoneyIcon color="#ff4512" /> */}
+              {x.icon}
               <Categoryterm category={x.category} sub={x.sub} />
             </div>
           );
